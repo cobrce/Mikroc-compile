@@ -48,9 +48,8 @@ def main(argc,argv):
                     cmdlnIP = format_path_dictionary(settings["cmdlnIP"],cfg["HEADER_PATH"])
                     cmdln = " ".join((cmdln0,cmdlnSP,cmdlnIP,settings["cmdlnLIBS"]))
                     Popen(cmdln)
-                    pass
                 except KeyError:
-                    print("Ket not found, invalid project file")
+                    print("Key not found, invalid project file")
                 except:
                     print("Some exception occured")
             else:
