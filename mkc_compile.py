@@ -35,7 +35,7 @@ def main(argc,argv):
                 try:
                     cmdln0 = settings["cmdln0"].format(
                         compiler = compiler,
-                        filename =[value  for key,value in cfg["FILES"].items() if key.startswith("file")][0] or os.path.basename(file_name),
+                        filename =([value  for key,value in cfg["FILES"].items() if key.startswith("file")] or [None])[0] or os.path.basename(file_name),
                         device = cfg["DEVICE"]["Name"],
                         clock =  cfg["DEVICE"]["clock"][:-6],
                         project = project_file,
